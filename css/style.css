@@ -1,0 +1,1100 @@
+@font-face {
+    font-family: myFont;
+    src: url("../fonts/asian.ttf");
+}
+:root{
+    --box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
+}
+
+html {
+    font-size: 60%;
+    height: 100%;
+    margin: 0;
+}
+
+.site-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: myFont, sans-serif;
+}
+
+/* -----------------------Navbár szöveg dekoráció /
+ kontent középre igazítás kezd----------------------- */
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+/* -----------------------Navbár szöveg dekoráció /
+ kontent középre igazítás zár----------------------- */
+
+/* -----------------------HEADER nyit----------------------- */
+
+
+header{
+    width: 100%;
+    position: fixed;
+    background: rgba(116,28,34,1);
+    padding: 0.5rem 0;
+    z-index: 1000;
+}
+
+.logo img{
+    display: block;
+    object-fit: cover;
+    border-radius:100px 5px 100px;
+    border: 2px solid #000;
+    width: 100%;
+    height: 100px;
+
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar nav{
+    display: flex;
+    align-items: center;
+}
+.navbar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.navbar nav li {
+    list-style-type: none;
+    margin: 0 1.8rem;
+}
+
+.navbar nav li a {
+    font-size: 1.4rem;
+    color: white;
+    position: relative;
+
+}
+.navbar nav li a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: white;
+    width: 0;
+    left: 0;
+    top: 30px;
+    transition: all 0.5s ease-in-out;
+}
+.navbar nav li a:hover::after{
+    width: 100%;
+}
+
+.login {
+    border-radius:350px;
+    border: 2px solid #000;
+    padding: 1.1rem;
+    transition: all 0.5s ease-in;
+
+}
+.login:hover {
+    transform: scale(1.1);
+    border-color: #fff;
+}
+.btn{
+    font-size: 2.2rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+/* -----------------------HEADER zár----------------------- */
+
+/* -----------------------Üdvözlő LAP nyit----------------------- */
+
+#showcase {
+    background: url('../img/restaurant.jpeg')
+    no-repeat center center/cover;
+    min-height: 100vh;
+    position: relative;
+    z-index: -10;
+}
+#showcase::before{
+    content: "";
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -11;
+}
+#showcase .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+#showcase .content h2{
+    font-size: 3rem;
+    font-family: myFont, sans-serif;
+    color:white;
+    text-align: center;
+    letter-spacing: 2px;
+}
+#showcase .content h3{
+    font-size: 1.8rem;
+    font-family: myFont, sans-serif;
+    color:white;
+    text-align: center;
+    letter-spacing: 2px;
+}
+#showcase .showcase-img{
+    display: flex;
+    object-fit: cover;
+    border-radius:100px 5px 100px;
+    border: 2px solid #000;
+    height: 120px;
+    width: 220px;
+}
+
+/* -----------------------Üdvözlő LAP zár----------------------- */
+
+/* -----------------------Kedvenc ételek nyit----------------------- */
+#favorite_food{
+    padding: 5rem 0;
+}
+.left_side_content img {
+    height: 50px;
+}
+
+.favorite_content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    grid-gap: 5rem;
+}
+.headings h2{
+    font-size: 4rem;
+}
+.headings h3{
+    font-size: 2rem;
+}
+
+.img_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.imgs{
+    display: flex;
+    align-items: center;
+}
+.imgs img{
+    display: block;
+    object-fit: cover;
+    height: 200px;
+
+}
+.content_for_img{
+    padding-left: 5rem;
+}
+.content_for_img h4{
+    font-size: 3rem;
+    padding-block-end: 0.5rem;
+}
+.content_for_img p{
+    font-size:1.2rem;
+    line-height: 1.5;
+    padding-right: 1rem;
+    font-family: 'Lucida Console', monospace;
+}
+.img_content .price {
+    font-size:1.7rem;
+    line-height: 1;
+    border-radius:50%;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.etlapszoveg h1{
+    font-size: 2rem;
+}
+.etlapszoveg a {
+    color: white;
+}
+.headings h3 a {
+    color: rgba(116,28,34,1);
+    transition: color 0.3s ease;
+}
+
+.headings h3 a:hover {
+    color: red;
+}
+
+.right_side_content {
+    display: block;
+    border: 2px solid rgba(116,28,34,1);
+    box-shadow: 0 0 60px rgba(116,28,34,1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 40px;
+    transform: scale(0.5);
+}
+
+.right_side_content:hover {
+    transform: scale(0.7);
+    box-shadow: 0 0 100px rgba(116,28,34,1);
+}
+
+.img_right_side img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* -----------------------Kedvenc ételek zár----------------------- */
+
+/* -----------------------Üdvözlő oldal rólunk nyit----------------------- */
+
+#about_us {
+    padding: 5rem 0;
+}
+
+.about_content {
+    display: block;
+    width: 100%;
+}
+
+.about_headings h3 {
+    padding-right: 1rem;
+    font-size: 3rem;
+    text-align: right;
+}
+
+.about_headings h3 a {
+    color: rgba(116, 28, 34, 1);
+    transition: color 0.3s ease;
+}
+
+.about_headings h3 a:hover {
+    color: red;
+}
+
+.about_img_content {
+    padding: 1rem 0;
+    text-align: right;
+}
+
+.about_imgs {
+    width: 100%;
+    text-align: center;
+}
+
+.about_imgs img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.image_caption {
+    text-align: center;
+    font-family: 'Lucida Console', monospace;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+
+.about_content_for_img {
+    text-align: right;
+}
+
+.about_content_for_img h4, .about_content_for_img p {
+    text-align: right;
+}
+
+.about_content_for_img h4 {
+    font-size: 3rem;
+    padding-block-end: 0.5rem;
+    padding-bottom: 2rem;
+}
+
+.about_content_for_img p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-family: 'Lucida Console', monospace;
+}
+
+
+/* -----------------------Üdvözlő oldal rólunk zár----------------------- */
+
+
+/*----------------------- NYITVATARTÁS/NAPI ajánlat nyit-----------------------*/
+.normal_heading {
+    font-size: 2rem;
+    font-family: myFont, sans-serif;
+    color: white;
+    text-align: center;
+}
+.normal_heading-1{
+    font-size: 3rem;
+    font-family: myFont, sans-serif;
+    color: rgba(116,28,34,1);
+    text-align: center;
+}
+.main_heading {
+    font-size: 4rem;
+    font-family:myFont, sans-serif;
+    text-align: center;
+}
+.main_heading-1{
+    font-size: 4rem;
+    font-family:myFont, sans-serif;
+    text-align: center;
+    color:black;
+}
+#deal_open{
+    padding: 5rem 0;
+}
+#deal_open .card_content{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#deal_open .cards{
+    margin: 1rem 0;
+}
+#deal_open .card_content h4{
+    font-family: myFont, sans-serif;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+#deal_open .card_content .price {
+    font-size: 2rem;
+    color: rgba(116,28,34,1);
+    font-weight: 600;
+    padding-top:2rem ;
+}
+.cards p {
+    font-family: 'Lucida Console', monospace;
+    font-size: 16px;
+    padding-top: 1rem;
+}
+
+/*----------------------- NYITVATARTÁS/NAPI ajánlat zár-----------------------*/
+
+
+/*----------------------- PROFIL nyit-----------------------*/
+
+.profile-section {
+    padding: 12rem 1rem 1rem;
+    font-size: 1.7rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    margin-left: 50rem;
+    max-width: 800px;
+}
+.profile-section [type="submit"], [type = "reset"]{
+    font-family: myFont, serif;
+    background-color: rgba(116,28,34,1);
+    color: white;
+    padding: .5rem 1rem;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-section [type="submit"]:hover, [type = "reset"]:hover{
+    background-color: rgba(116,28,34,0.8);
+}
+.profile-section  input[type="email"], input[type="password"], input[type="text"], input[type="tel"]{
+    width: 50%;
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+
+#userInfo img {
+    max-height:186px;
+    margin:2rem 2rem 5rem 2rem;
+    outline: 2px solid rgba(116,28,34,1);
+    outline-offset: 15px;
+    border-radius: 10rem;
+    border: 1px solid #000000;
+}
+
+#deleteUserInfo {
+    font-family: myFont, serif;
+    background-color: rgba(116,28,34,1);
+    color: red;
+    padding: .5rem 1rem;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.update1_field, .update2_field, .update3_field {
+    padding: 1rem;
+}
+.update1_field label, .update2_field label, .update3_field label{
+    display: block;
+}
+.update1, .update2 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+}
+.update3{
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+.update1 h2, .update2 h2, .update3 h2 {
+    color: rgba(116,28,34,1);
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+}
+
+.legend_update {
+    float: left;
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: rgba(116,28,34,1);
+}
+/*----------------------- PROFIL zár-----------------------*/
+
+/*----------------------- RENDELÉS nyit-----------------------*/
+
+.order-page-container {
+    margin-bottom: 45rem;
+    padding-top: 20rem;
+    padding-left: 40rem;
+}
+.form-group-order input {
+    border: 1px solid #ccc;
+    margin-top: .5rem;
+    border-radius: 5px;
+}
+.order-page-container .submit-btn-order {
+    font-family: myFont, serif;
+    background-color: rgba(116,28,34,1);
+    color: white;
+    padding: .5rem 1rem;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.order-page-container .submit-btn-order:hover{
+    background-color: rgba(116,28,34,0.8);
+}
+#timer {
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    display: none;
+}
+.special-instructions {
+    margin-top: 2rem;
+}
+
+.special-instructions h3 {
+    margin-bottom: 0.5rem;
+}
+
+.special-instructions textarea {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 100px;
+}
+.promotions {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 2rem;
+    border: 1px solid #ddd;
+    width: 50%;
+}
+
+.promotions h3 {
+    margin-bottom: 0.5rem;
+}
+
+.promotions p {
+    font-size: 16px;
+}
+.estimated-delivery {
+    margin-top: 2rem;
+}
+
+.estimated-delivery h3 {
+    margin-bottom: 0.5rem;
+}
+
+.estimated-delivery p {
+    font-size: 16px;
+}
+.menu-container {
+    text-align: center;
+
+    width: 50%;
+}
+
+.menu-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.menu-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.menu-item h3 {
+    color: rgba(116,28,34,1);
+    margin-bottom: 1rem;
+}
+
+.menu-item p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.menu-item button {
+    background-color: rgba(116,28,34,1);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.menu-item button:hover {
+    background-color: rgba(116,28,34,0.8);
+}
+/*----------------------- RENDELÉS zár-----------------------*/
+
+
+/* -----------------------FOOTER nyit----------------------- */
+#footer {
+    background: #202020;
+    padding: 4rem 0;
+    color: white;
+    font-size: 1.4rem;
+}
+.footer_container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:2rem;
+}
+.rolunk{
+    padding-right: 10rem;
+}
+.rolunk img{
+
+    display: block;
+    object-fit: cover;
+    border-radius:100px 5px 100px;
+    border: 2px solid #000000;
+    width: 40%;
+}
+.rolunk p{
+    line-height: 1.8;
+    font-size: 15px;
+    font-family: 'Lucida Console', monospace;
+}
+.rolunk a{
+    color: rgba(116,28,34,1);
+}
+.footer_container h2{
+    padding-bottom: 3rem;
+    color: rgba(116,28,34,1);
+}
+.nyitvatartas{
+    line-height: 1.8;
+    margin-left: 15rem;
+}
+.nyitvatartas .napok, .email, .cim{
+    color: rgba(116,28,34,1);
+}
+.nyitvatartas .napok span {
+    color: white;
+}
+.kiszallitas span {
+    padding-top: 2rem;
+    font-size:3rem;
+    color: rgba(116,28,34,1);
+
+}
+footer {
+    background: #171717;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    color: white;
+}
+.kapcsolat{
+    margin-left: 15rem;
+}
+.kapcsolat p{
+    line-height: 2;
+    margin: 0.5rem 0 0 0;
+}
+.kapcsolat i {
+    margin:5rem 5rem 0 0;
+}
+/* -----------------------FOOTER zár----------------------- */
+
+
+/*étlap nyítás*/
+.ételek{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 25px;
+
+}
+.képek img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin-top: 90px;
+}
+.képek img:hover{
+    transform:scale(1.1);
+}
+.képek h4{
+    padding: 20px;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 18px;
+}
+.képek button{
+    padding: 5px 30px;
+    border: none;
+    outline: none;
+    background-color: rgba(116,28,34,1);
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s all;
+
+}
+.képek button:hover {
+    transform: scale(1.10);
+}
+.képek blockquote{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 14px;
+}/*kosar nyit*/
+.shop-item {
+    margin: 30px;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 250px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    text-align: center;
+    flex-grow: 1;
+    color: #333;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#sticky-cart {
+    position: fixed;
+    top: 110px;
+    right: 0;
+    width: 250px;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 80vh;
+    transform: translateX(calc(100% - 50px));
+    transition: transform 0.5s ease;
+}
+
+#sticky-cart:hover {
+    transform: translateX(0%);
+}
+.content-section {
+
+}
+.cart-header, .cart-price, .cart-quantity, .cart-total-title, .cart-total-price {
+    font-weight: bold;
+    color: #333;
+}
+
+.cart-header {
+    font-size: 1em; /* Reduced font size */
+}
+
+.cart-column, .cart-row, .cart-total {
+    display: flex;
+    align-items: center;
+}
+
+.cart-column {
+    border-bottom: 1px solid black;
+    margin: 5px 1em 0 0; /* Reduced margin */
+    padding-bottom: 5px; /* Reduced padding */
+}
+
+.cart-item { width: 45%; } /* Adjusted width for better fit */
+
+.cart-price { width: 20%; } /* Adjusted width for better fit */
+
+.cart-quantity { width: 35%; } /* Kept the same, adjust if necessary */
+
+.cart-item-title {
+    margin-left: .5em;
+    font-size: 1em; /* Reduced font size */
+    word-wrap: break-word;
+}
+
+.btn-danger, .btn-purchase {
+    font-size: 0.8em; /* Reduced font size */
+    padding: 5px 15px; /* Reduced padding */
+    transition: transform 0.2s;
+}
+
+.btn-danger:hover, .btn-purchase:hover {
+    transform: scale(1.05); /* Reduced scale effect */
+}
+
+.cart-quantity-input {
+    height: 30px; /* Slightly reduced height */
+    width: 40px; /* Slightly reduced width */
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #808080;
+    color: #333;
+    text-align: center;
+    margin-right: 15px; /* Reduced margin */
+}
+
+.cart-total {
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+.cart-total-title, .cart-total-price {
+    font-size: 0.9em; /* Reduced font size */
+}
+
+.btn-purchase {
+    margin: 20px auto 40px;
+    font-size: 1.5rem;
+    padding: 5px 15px;
+    outline: none;
+    border: none;
+}
+
+
+
+
+
+
+
+
+/*rolunk*/
+main {
+    padding: 20px;
+}
+
+/* Rólunk konténer */
+.rolunk-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Történet, Cél */
+.tortenet, .cel {
+    width: 50%;
+    padding: 10px;
+}
+
+/* Csapat */
+.csapat {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Csapat tag */
+.tag {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.tag img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Rólunk mondták */
+.rolunk2 {
+    padding: 5rem 0;
+    text-align: center;
+
+
+}
+
+.rolunk2__tartalom {
+    margin:0 auto;
+    max-width: 800px;
+    padding: 10px;
+    color:#f5ce0f ;
+    background-color: rgba(56, 60, 71, 0.37);
+
+}
+
+.rolunk2 h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 10rem;
+    color: black;
+
+}
+
+.rolunk2 p{
+    font-size: 15px;
+    padding: 10px;
+}
+.rolunk2 ul {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.rolunk2 h3 {
+    font-size: 1.8rem;
+    color:#4abd3a ;
+}
+.csapatunk {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.csapat__vezetok {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.csapat__tag {
+    text-align: center;
+    margin: 0 1rem;
+    color: white;
+}
+
+.csapat__tag img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.csapat__tag h3 {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.csapat__tag p {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    color: #f5ce0f;
+}
+
+.csapat__tagok {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    color: #4abd3a;
+}
+
+.csapat__tagok li {
+    margin: 1rem;
+    text-align: center;
+}
+
+.csapat__tagok img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.csapat__tagok h4 {
+    font-size: 1.4rem;
+}
+.rolunk2-mondtak {
+    padding: 1rem 0;
+    text-align: left;
+    background-color: rgba(56, 60, 71, 0.37);
+}
+
+.velemenyek {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #f5ce0f ;
+}
+
+.velemeny {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    line-height: 1.5;
+}
+
+.velemeny p {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.szerzo {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 1rem;
+}
+.rolunk2 {
+    background-image: url("../img/hatter3.jpeg");
+    padding: 5rem 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#deleteUserInfo {
+    transition: transform 0.2s;
+}
+#deleteUserInfo:hover{
+    transform: scale(1.4);
+}
+
+/*----------------------------- Értékelés -----------------------------*/
+
+#ratingModal {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    position:fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+}
+.rating {
+    background-color: rgba(116,28,34,0.9);
+    text-align: center;
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.rating h2 {
+    margin-bottom: 15px;
+    color: white;
+    border-radius: 15px;
+    border: 2px solid;
+    font-size: 2.3rem;
+}
+.rating button {
+    font-family: myFont, serif;
+    background-color: rgba(116,28,34,0.2);
+    color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 2rem;
+}
+.rating button:hover{
+    background-color: rgba(116,28,34,1);
+}
+
+

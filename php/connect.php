@@ -1,6 +1,6 @@
 <?php
-$HOSTNAME = 'localhost';
-$PORT = 3307;
+$HOSTNAME = 'db';
+$PORT = 3306;
 $USERNAME = 'root';
 $PASSWORD = '';
 $DATABASE = 'webterv';
